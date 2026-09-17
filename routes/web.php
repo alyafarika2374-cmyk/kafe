@@ -19,6 +19,7 @@ Route::post('/login', [AuthController::class, 'login'])->name('login.attempt');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::get('/index', function () {return view('index');});
 Route::get('/Meja&Reservasi', function () { return view('Meja&Reservasi'); })->name('Meja&Reservasi');
+Route::get('/pos', function () { return view('pos'); })->name('pos');
 
 // ==== SEMUA HALAMAN ADMIN WAJIB LOGIN ====
 Route::middleware('auth')->group(function () {
@@ -57,4 +58,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/Laporan', function () { return view('Laporan'); })->name('Laporan');
     Route::get('/Pesanan', function () { return view('Pesanan'); })->name('Pesanan');
     Route::get('/settings', function () { return view('settings'); })->name('settings');
+
+    //kasir
+    Route::get('/kasir', function () { return view('kasir'); })->name('index');
+    Route::get('/kasir', function () { return view('kasir'); })->name('landing.kasir');
+    Route::post('/kasir/demo', function () { return view('kasir'); })->name('landing.kasir.demo');
 });
