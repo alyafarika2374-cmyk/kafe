@@ -18,7 +18,8 @@ Route::get('/login', function () { return view('login'); })->name('login');
 Route::post('/login', [AuthController::class, 'login'])->name('login.attempt');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::get('/index', function () {return view('index');});
-Route::get('/Meja&Reservasi', function () { return view('Meja&Reservasi'); })->name('Meja&Reservasi');
+Route::get('/Meja&Reservasi', [ReservasiController::class, 'index'])
+    ->name('Meja&Reservasi');
 Route::get('/pos', function () { return view('pos'); })->name('pos');
 
 // ==== SEMUA HALAMAN ADMIN WAJIB LOGIN ====

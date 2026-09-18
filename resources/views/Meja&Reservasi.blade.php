@@ -10,9 +10,7 @@
 
         <!-- HEADER -->
         <div class="page-heading d-flex justify-content-between align-items-center mb-4">
-
             <div class="page-heading-copy">
-
                 <span class="page-icon">
                     <i class="bi bi-grid-3x3-gap-fill"></i>
                 </span>

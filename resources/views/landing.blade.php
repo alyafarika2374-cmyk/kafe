@@ -146,7 +146,7 @@
         }
 
         .reservation-section {
-            background: #ffffff;
+            background: #47c100;
         }
 
         .reservation-image {
